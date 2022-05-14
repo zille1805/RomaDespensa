@@ -1,0 +1,25 @@
+{
+  "name": "despensa-roma",
+  "version": "1.0.0",
+  "description": "Proyecto para CoderHouse",
+  "main": "index.js",
+  "scripts": {
+    "start": "index.html",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zille1805/RomaDespensa.git"
+  },
+  "author": "Walter Emmanuel Zille",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zille1805/RomaDespensa/issues"
+  },
+  "homepage": "https://github.com/zille1805/RomaDespensa#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
