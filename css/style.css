@@ -34,6 +34,7 @@ body {
           border: none;
           padding: .2rem .4rem;
           text-align: center;
+          margin: 5px;
           background-color: #8a1d1d;
           color: white;
           text-decoration: none;
@@ -56,8 +57,7 @@ body {
     grid-area: cont;
     margin: 0px 30px;
     flex-direction: column;
-    align-items: center;
-    justify-content: center; }
+    align-items: center; }
   body footer {
     grid-area: footer;
     border-top: 2px solid black;
@@ -72,10 +72,18 @@ body {
         width: 30px; }
 
 .carousel {
-  width: 500px;
-  height: 400px; }
+  width: 30%;
+  height: 30%; }
+  .carousel .carousel-item {
+    width: 450px;
+    height: 450px; }
+    .carousel .carousel-item img {
+      width: 50%;
+      height: 50%; }
+  .carousel .carousel-indicators {
+    position: static !important; }
 
-.contenedorDeOfertas {
+.producto-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-align: center;
@@ -83,13 +91,13 @@ body {
   column-gap: 20px;
   row-gap: 30px; }
   @media screen and (max-width: 767px) {
-    .contenedorDeOfertas {
+    .producto-card {
       grid-template-columns: 1fr; } }
   @media screen and (min-width: 768px) {
-    .contenedorDeOfertas {
+    .producto-card {
       margin-top: 10px;
       grid-template-columns: 1fr 1fr; } }
-  .contenedorDeOfertas .tarjetas {
+  .producto-card .card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -100,28 +108,24 @@ body {
     border-radius: 15px;
     font-family: sans-serif; }
     @media screen and (min-width: 768px) {
-      .contenedorDeOfertas .tarjetas {
+      .producto-card .card {
         width: 360px; } }
-    .contenedorDeOfertas .tarjetas .titulo {
+    .producto-card .card .card-title {
       margin-top: 2px;
       font-size: 24px;
       padding: 10px 10px 0 10px;
       margin-bottom: 4px; }
-    .contenedorDeOfertas .tarjetas .cuerpo {
-      padding: 10px;
-      height: auto; }
-    .contenedorDeOfertas .tarjetas .pie {
-      background: #6699ff;
-      border-radius: 0 0 15px 15px;
-      padding: 10px;
-      text-align: center;
-      margin-bottom: 3px; }
-      .contenedorDeOfertas .tarjetas .pie a {
-        text-decoration: none;
-        color: white; }
-  .contenedorDeOfertas .imgOfertas {
+  .producto-card .imgOfertas {
     width: 60%;
     height: 60%; }
+
+.productos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+  .productos .list-group {
+    margin-right: 20px;
+    text-align: center; }
 
 .quienesSomos {
   display: flex;
